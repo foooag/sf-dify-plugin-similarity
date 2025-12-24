@@ -1,0 +1,17 @@
+identity:
+  author: gaooof
+  name: sf-dify-plugin-similarity
+  label:
+    en_US: sf-dify-plugin-similarity
+    zh_Hans: sf-dify-plugin-similarity
+    pt_BR: sf-dify-plugin-similarity
+  description:
+    en_US: similarity calculation
+    zh_Hans: similarity calculation
+    pt_BR: similarity calculation
+  icon: icon.svg
+tools:
+  - tools/sf-dify-plugin-similarity.yaml
+extra:
+  python:
+    source: provider/sf-dify-plugin-similarity.py

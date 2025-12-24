@@ -1,0 +1,57 @@
+identity:
+  name: sf-dify-plugin-similarity
+  author: gaooof
+  label:
+    en_US: Text Similarity Calculation
+    zh_Hans: 文本相似度计算
+    pt_BR: Cálculo de similaridade de texto
+description:
+  human:
+    en_US: Calculate the similarity between two text strings using embedding models
+    zh_Hans: 使用 embedding 模型计算两个文本字符串的相似度
+    pt_BR: Calcular a similaridade entre duas strings de texto usando modelos de embedding
+  llm: Calculate the similarity between two text strings using embedding models with L2 normalization and return a similarity score between 0 and 1
+parameters:
+  - name: text1
+    type: string
+    required: true
+    label:
+      en_US: First Text
+      zh_Hans: 第一个文本
+      pt_BR: Primeiro Texto
+    human_description:
+      en_US: The first text string to compare
+      zh_Hans: 要比较的第一个文本字符串
+      pt_BR: A primeira string de texto para comparar
+    llm_description: The first text string to compare for similarity calculation
+    form: llm
+  - name: text2
+    type: string
+    required: true
+    label:
+      en_US: Second Text
+      zh_Hans: 第二个文本
+      pt_BR: Segundo Texto
+    human_description:
+      en_US: The second text string to compare
+      zh_Hans: 要比较的第二个文本字符串
+      pt_BR: A segunda string de texto para comparar
+    llm_description: The second text string to compare for similarity calculation
+    form: llm
+  - name: embedding_model
+    type: model-selector
+    scope: text-embedding
+    required: true
+    label:
+      en_US: Embedding Model
+      zh_Hans: Embedding 模型
+      pt_BR: Modelo de Embedding
+    human_description:
+      en_US: The embedding model to use for text vectorization
+      zh_Hans: 用于文本向量化的 embedding 模型
+      pt_BR: O modelo de embedding a ser usado para vetorização de texto
+    llm_description: The embedding model to use for converting text to vectors
+    form: form
+extra:
+  python:
+    source: tools/sf-dify-plugin-similarity.py

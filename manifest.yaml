@@ -1,0 +1,53 @@
+version: 0.0.1
+type: plugin
+author: gaooof
+name: sf-dify-plugin-similarity
+label:
+  en_US: sf-dify-plugin-similarity
+  ja_JP: sf-dify-plugin-similarity
+  zh_Hans: sf-dify-plugin-similarity
+  pt_BR: sf-dify-plugin-similarity
+description:
+  en_US: similarity calculation
+  ja_JP: similarity calculation
+  zh_Hans: similarity calculation
+  pt_BR: similarity calculation
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: false
+      text_embedding: true
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    node:
+      enabled: false
+    endpoint:
+      enabled: false
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1024
+plugins:
+  tools:
+    - provider/sf-dify-plugin-similarity.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-12-24T15:35:38.3482+08:00
+privacy: PRIVACY.md
+verified: false
