@@ -16,7 +16,6 @@ class SfDifyPluginSimilarityTool(Tool):
             text1 = tool_parameters.get("text1", "")
             text2 = tool_parameters.get("text2", "")
             embedding_model = tool_parameters.get("embedding_model", "")
-            print(f"embedding_model: {embedding_model}")
             # Validate inputs
             if not text1 or not text2:
                 yield self.create_json_message({
